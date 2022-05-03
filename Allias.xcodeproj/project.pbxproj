@@ -18,6 +18,7 @@
 		CEA7E6552821673F004C4CAA /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7E6542821673F004C4CAA /* DictionaryViewController.swift */; };
 		CEA7E657282167CA004C4CAA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7E656282167CA004C4CAA /* GameViewController.swift */; };
 		CEA7E6592821683A004C4CAA /* RullsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7E6582821683A004C4CAA /* RullsViewController.swift */; };
+		CEA7E65E28218FF8004C4CAA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CEA7E65D28218FF8004C4CAA /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		CEA7E6542821673F004C4CAA /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		CEA7E656282167CA004C4CAA /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		CEA7E6582821683A004C4CAA /* RullsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RullsViewController.swift; sourceTree = "<group>"; };
+		CEA7E65D28218FF8004C4CAA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 		CEA7E62D2820F43C004C4CAA = {
 			isa = PBXGroup;
 			children = (
+				CEA7E65D28218FF8004C4CAA /* .gitignore */,
 				CEA7E6382820F43C004C4CAA /* Allias */,
 				CEA7E6372820F43C004C4CAA /* Products */,
 			);
@@ -164,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA7E65E28218FF8004C4CAA /* .gitignore in Resources */,
 				CEA7E6462820F43D004C4CAA /* LaunchScreen.storyboard in Resources */,
 				CEA7E6432820F43D004C4CAA /* Assets.xcassets in Resources */,
 				CEA7E6412820F43C004C4CAA /* Main.storyboard in Resources */,
