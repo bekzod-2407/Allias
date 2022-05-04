@@ -7,8 +7,32 @@
 
 import UIKit
 
-class DictionaryViewController: UIViewController {
+class GradientView: UIView {
+    
+    private let gradientLayer = CAGradientLayer()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupGradient()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        gradientLayer.frame = bounds
+    }
+    
+    private func setupGradient() {
+        self.layer.addSublayer(gradientLayer)
+        gradientLayer.colors = [UIColor.systemIndigo.cgColor, UIColor.purple.cgColor]
+    }
+}
 
+class DictionaryViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
