@@ -7,9 +7,9 @@
 
 import Foundation
 
-final class OptionsStruct {
+final class SingletonStruct {
     
-    static var shared = OptionsStruct()
+    static var shared = SingletonStruct()
     
     var roundTime: Int = 0
     var wordCount: Int = 0
