@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35E3624C2823CB8800CCBEDF /* GameInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E3624B2823CB8800CCBEDF /* GameInfoTableViewCell.swift */; };
 		8F309E3028230095000EAAFA /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F309E2F28230095000EAAFA /* Singleton.swift */; };
 		8F309E33282300FC000EAAFA /* GradientUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F309E32282300FC000EAAFA /* GradientUIView.swift */; };
 		CEA7E63A2820F43C004C4CAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7E6392820F43C004C4CAA /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35E3624B2823CB8800CCBEDF /* GameInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoTableViewCell.swift; sourceTree = "<group>"; };
 		8F309E2F28230095000EAAFA /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Singleton.swift; path = Allias/Controllers/Singleton.swift; sourceTree = SOURCE_ROOT; };
 		8F309E32282300FC000EAAFA /* GradientUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientUIView.swift; sourceTree = "<group>"; };
 		CEA7E6362820F43C004C4CAA /* Allias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Allias.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +105,7 @@
 				CEA7E652282166D9004C4CAA /* OptionViewController.swift */,
 				CEA7E656282167CA004C4CAA /* GameViewController.swift */,
 				CEA7E650282165F9004C4CAA /* GameInfoViewController.swift */,
+				35E3624B2823CB8800CCBEDF /* GameInfoTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				CEA7E6592821683A004C4CAA /* RullsViewController.swift in Sources */,
 				CEA7E63A2820F43C004C4CAA /* AppDelegate.swift in Sources */,
 				CEA7E63C2820F43C004C4CAA /* SceneDelegate.swift in Sources */,
+				35E3624C2823CB8800CCBEDF /* GameInfoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
