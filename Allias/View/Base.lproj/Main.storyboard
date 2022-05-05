@@ -46,6 +46,12 @@
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="36"/>
                                                     <color key="baseBackgroundColor" red="0.29019607843137252" green="0.11764705882352941" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6t-rN-Jud">
                                                 <rect key="frame" x="0.0" y="72" width="392" height="67"/>
@@ -57,6 +63,12 @@
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="36"/>
                                                     <color key="baseBackgroundColor" red="0.2901960784" green="0.11764705882352941" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3a-JU-uX9">
                                                 <rect key="frame" x="0.0" y="144" width="392" height="67"/>
@@ -68,6 +80,12 @@
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="36"/>
                                                     <color key="baseBackgroundColor" red="0.2901960784" green="0.1176470588" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <segue destination="pWC-hF-8gw" kind="show" id="kGZ-jf-mA0"/>
                                                 </connections>
@@ -260,6 +278,12 @@
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                                <integer key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -273,6 +297,12 @@
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="yol-hO-LBF"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="hul-W7-seL"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="let-JL-Xla"/>
