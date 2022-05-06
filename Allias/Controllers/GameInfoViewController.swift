@@ -1,29 +1,62 @@
-//
-//  GameInfoViewController.swift
-//  Allias
-//
-//  Created by user on 03/05/22.
-//
 
 import UIKit
 
-class GameInfoViewController: UIViewController {
-
+class GameInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableTeams: UITableView!
+    @IBOutlet weak var nextTeamToPlay: UILabel!
+    @IBOutlet weak var playButton: UIButton!
+    
+    var singleShared = SingletonStruct()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tableTeams.delegate = self
+        tableTeams.dataSource = self
+        playButton.layer.cornerRadius = 25
+        tableTeams.separatorStyle = .none
+        tableTeams.showsVerticalScrollIndicator = false
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func previousPageButtonPressed(_ sender: UIButton) {
+        
     }
-    */
-
+    
+    @IBAction func playButtonPressed(_ sender: UIButton) {
+        
+    }
+    
+    func tableView(_ tableTeams: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return singleShared.teamArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
+    func tableView(_ tableTeams: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableTeams.dequeueReusableCell(withIdentifier: "gameInfoCell", for: indexPath) as! GameInfoTableViewCell
+        let teamCell = singleShared.teamArray[indexPath.row]
+        cell.teamNameLabel.text = teamCell
+        if let pointTeam = singleShared.teamDictionary[teamCell] {
+            cell.pointsLabel.text = String(pointTeam)
+        }
+        cell.layer.backgroundColor = UIColor.clear.cgColor
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            tableView.beginUpdates()
+            singleShared.teamArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.endUpdates()
+        }
+    }
+    
 }
