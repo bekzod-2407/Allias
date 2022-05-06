@@ -18,3 +18,8 @@ final class SingletonStruct {
     
     
 }
+
+struct GameTeam {
+    var teamName: String
+    var teamPoint: String
+}

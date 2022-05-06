@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7f3-U0-Kv5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="STS-Lg-Q5T">
-                                <rect key="frame" x="11" y="59" width="392" height="798"/>
+                                <rect key="frame" x="11" y="103" width="392" height="754"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yio-GC-YFh">
-                                        <rect key="frame" x="0.0" y="0.0" width="392" height="587"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="392" height="543"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logotip" translatesAutoresizingMaskIntoConstraints="NO" id="N9p-Be-Uol">
-                                                <rect key="frame" x="-20" y="-8" width="432" height="603"/>
+                                                <rect key="frame" x="-20" y="-8" width="432" height="559"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -34,7 +34,7 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wtU-Hy-SvC" userLabel="ButtonStack ">
-                                        <rect key="frame" x="0.0" y="587" width="392" height="211"/>
+                                        <rect key="frame" x="0.0" y="543" width="392" height="211"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdr-Ks-3Mn">
                                                 <rect key="frame" x="0.0" y="0.0" width="392" height="67"/>
@@ -52,6 +52,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="Tst-v0-6hu" kind="show" id="anS-n7-fj8"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6t-rN-Jud">
                                                 <rect key="frame" x="0.0" y="72" width="392" height="67"/>
@@ -119,29 +122,148 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <navigationItem key="navigationItem" id="wF9-Xn-36K"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-117.39130434782609" y="-171.42857142857142"/>
+            <point key="canvasLocation" x="792.75362318840587" y="-171.42857142857142"/>
         </scene>
         <!--Game Info View Controller-->
         <scene sceneID="yZH-eH-CN7">
             <objects>
-                <viewController id="Tst-v0-6hu" customClass="GameInfoViewController" customModule="Allias" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Tst-v0-6hu" customClass="GameInfoViewController" customModule="Allias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nBE-Rd-5Ns" customClass="GradientUIView" customModule="Allias" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GameInfoVC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7K-cC-u1d">
-                                <rect key="frame" x="86" y="109" width="269" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEAMS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7K-cC-u1d">
+                                <rect key="frame" x="82" y="106" width="250" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="kbe-KR-Hof"/>
+                                    <constraint firstAttribute="width" constant="250" id="r4S-1W-T1f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
                                 <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJy-JT-IAd">
+                                <rect key="frame" x="17" y="124" width="30" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="uhD-Ub-3JC"/>
+                                    <constraint firstAttribute="height" constant="34" id="yUp-HN-TNf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="BackBotton"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="previousPageButtonPressed:" destination="Tst-v0-6hu" eventType="touchUpInside" id="aDj-QP-oMz"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fKR-Fa-BJA">
+                                <rect key="frame" x="37" y="211" width="340" height="350"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="340" id="24l-NK-1ru"/>
+                                    <constraint firstAttribute="height" constant="350" id="aEw-ZJ-hyz"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gameInfoCell" rowHeight="70" id="ZWG-Ds-W5Z" customClass="GameInfoTableViewCell" customModule="Allias" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="340" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZWG-Ds-W5Z" id="tvL-Px-BLn">
+                                            <rect key="frame" x="0.0" y="0.0" width="340" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oi8-Uf-w93">
+                                                    <rect key="frame" x="0.0" y="10" width="340" height="50"/>
+                                                    <color key="backgroundColor" red="0.99607843139999996" green="0.98431372549999996" blue="0.98431372549999996" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="4He-2U-X5T"/>
+                                                        <constraint firstAttribute="width" constant="340" id="QoD-CL-8Tv"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some name of team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQS-4W-eBG">
+                                                    <rect key="frame" x="10" y="13" width="250" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="jIf-Eh-crF"/>
+                                                        <constraint firstAttribute="width" constant="250" id="twk-8x-Rdg"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="393-s1-Gjp">
+                                                    <rect key="frame" x="279" y="13" width="51" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="51" id="f3c-yz-nKZ"/>
+                                                        <constraint firstAttribute="height" constant="44" id="sem-Kf-XPE"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="393-s1-Gjp" firstAttribute="centerY" secondItem="tvL-Px-BLn" secondAttribute="centerY" id="brN-ro-MaX"/>
+                                                <constraint firstItem="YQS-4W-eBG" firstAttribute="leading" secondItem="tvL-Px-BLn" secondAttribute="leading" constant="10" id="fcL-Ow-Srz"/>
+                                                <constraint firstAttribute="trailing" secondItem="393-s1-Gjp" secondAttribute="trailing" constant="10" id="jAS-nu-uWn"/>
+                                                <constraint firstItem="oi8-Uf-w93" firstAttribute="centerX" secondItem="tvL-Px-BLn" secondAttribute="centerX" id="jya-Sg-aJx"/>
+                                                <constraint firstItem="oi8-Uf-w93" firstAttribute="centerY" secondItem="tvL-Px-BLn" secondAttribute="centerY" id="sjC-Gx-vdf"/>
+                                                <constraint firstItem="YQS-4W-eBG" firstAttribute="centerY" secondItem="tvL-Px-BLn" secondAttribute="centerY" id="vV5-wn-H0T"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="cellView" destination="oi8-Uf-w93" id="cA9-WZ-ARw"/>
+                                            <outlet property="pointsLabel" destination="393-s1-Gjp" id="9bS-mV-ihf"/>
+                                            <outlet property="teamNameLabel" destination="YQS-4W-eBG" id="Ds5-XK-flQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXB-DD-LSk">
+                                <rect key="frame" x="37" y="786" width="340" height="56"/>
+                                <color key="backgroundColor" red="0.34901961679999999" green="0.270588249" blue="0.58823531870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="cKi-JE-fvD"/>
+                                    <constraint firstAttribute="width" constant="340" id="qCw-bD-sr6"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="PLAY" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="Tst-v0-6hu" eventType="touchUpInside" id="g6l-tG-dnN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who will be the next" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IT-2J-vj7">
+                                <rect key="frame" x="37" y="691" width="340" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="340" id="Dg5-Nn-RQh"/>
+                                    <constraint firstAttribute="height" constant="70" id="K0F-uc-w0U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1zw-zY-Kof"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2IT-2J-vj7" firstAttribute="centerX" secondItem="1zw-zY-Kof" secondAttribute="centerX" id="1lF-u3-jfa"/>
+                            <constraint firstItem="fKR-Fa-BJA" firstAttribute="centerX" secondItem="1zw-zY-Kof" secondAttribute="centerX" id="3mp-oh-aAN"/>
+                            <constraint firstItem="p7K-cC-u1d" firstAttribute="top" secondItem="1zw-zY-Kof" secondAttribute="top" constant="18" id="8Io-Xd-dTr"/>
+                            <constraint firstItem="fKR-Fa-BJA" firstAttribute="top" secondItem="p7K-cC-u1d" secondAttribute="bottom" constant="35" id="9YF-1s-ZNx"/>
+                            <constraint firstItem="oJy-JT-IAd" firstAttribute="leading" secondItem="1zw-zY-Kof" secondAttribute="leading" constant="17" id="Bmo-sz-tWx"/>
+                            <constraint firstItem="eXB-DD-LSk" firstAttribute="centerX" secondItem="1zw-zY-Kof" secondAttribute="centerX" id="Ftt-fq-Ifg"/>
+                            <constraint firstItem="p7K-cC-u1d" firstAttribute="centerX" secondItem="1zw-zY-Kof" secondAttribute="centerX" id="PKo-9g-hQR"/>
+                            <constraint firstItem="eXB-DD-LSk" firstAttribute="top" secondItem="2IT-2J-vj7" secondAttribute="bottom" constant="25" id="hW2-Be-jRJ"/>
+                            <constraint firstItem="1zw-zY-Kof" firstAttribute="bottom" secondItem="eXB-DD-LSk" secondAttribute="bottom" constant="20" id="lzu-a5-FTO"/>
+                            <constraint firstItem="oJy-JT-IAd" firstAttribute="top" secondItem="1zw-zY-Kof" secondAttribute="top" constant="36" id="r87-tS-dcn"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
                                 <color key="value" red="0.53725490200000003" green="0.13725490200000001" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -151,10 +273,16 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <navigationItem key="navigationItem" id="uIl-cM-j7s"/>
+                    <connections>
+                        <outlet property="nextTeamToPlay" destination="2IT-2J-vj7" id="LPo-Gc-mAz"/>
+                        <outlet property="playButton" destination="eXB-DD-LSk" id="HYO-ZU-ZwG"/>
+                        <outlet property="tableTeams" destination="fKR-Fa-BJA" id="k7l-aQ-hok"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dXo-Ru-A9T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="802.89855072463774" y="143.97321428571428"/>
+            <point key="canvasLocation" x="1711.5942028985507" y="143.30357142857142"/>
         </scene>
         <!--Option View Controller-->
         <scene sceneID="OuS-xQ-lun">
@@ -186,7 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FSL-oV-iby" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="802.89855072463774" y="-617.41071428571422"/>
+            <point key="canvasLocation" x="1713.0434782608697" y="-617.41071428571422"/>
         </scene>
         <!--Dictionary View Controller-->
         <scene sceneID="v4c-CU-IxU">
@@ -218,7 +346,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ma8-Rk-h9O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1934.7826086956522" y="-617.41071428571422"/>
+            <point key="canvasLocation" x="2844.9275362318845" y="-617.41071428571422"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="kXo-Ej-Z9U">
@@ -250,7 +378,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQ7-hW-Ohi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1934.7826086956522" y="143.97321428571428"/>
+            <point key="canvasLocation" x="2844.9275362318845" y="143.97321428571428"/>
         </scene>
         <!--Rulls View Controller-->
         <scene sceneID="r7m-8i-6i4">
@@ -261,12 +389,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUv-xa-GFQ">
-                                <rect key="frame" x="20" y="64" width="374" height="1098"/>
+                                <rect key="frame" x="20" y="108" width="374" height="1054"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BNH-vZ-UDz">
-                                        <rect key="frame" x="0.0" y="0.0" width="366" height="1090"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="1046"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <mutableString key="text">СКАЖИ ИНАЧЕ - игра разъяснения слов, в которой принимают участие команды, состоящие из двух человек. Минимальное количество игроков 4 человека, максимальному предела нет.
+                                        <string key="text">СКАЖИ ИНАЧЕ - игра разъяснения слов, в которой принимают участие команды, состоящие из двух человек. Минимальное количество игроков 4 человека, максимальному предела нет.
 
 В игре СКАЖИ ИНАЧЕ надо суметь объяснить другими словами разгадываемое слово. То есть задачей является, с определёнными ограничениями!! и с помощью объяснении, синонимов, антонимов и намёков, достичь того, чтобы компаньоны по игре отгадали как можно больше указанных в карточке слов. Команда, которая подойдёт к финишу первой, становится победителем.
 
@@ -274,7 +402,7 @@
 
 Ход игры
 
-Карточки со словами перемешиваются и складываются в ячейки коробки. Последнюю карточку каждой колоды переворачивают. Это делается для того, чтобы в свое время увидеть &lt;...&gt;</mutableString>
+Карточки со словами перемешиваются и складываются в ячейки коробки. Последнюю карточку каждой колоды переворачивают. Это делается для того, чтобы в свое время увидеть &lt;...&gt;</string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -329,8 +457,27 @@
             </objects>
             <point key="canvasLocation" x="-801.44927536231887" y="407.8125"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CTw-jb-bOH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7f3-U0-Kv5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Stz-yf-YAm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TyD-QH-oc5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="en1-Zg-gN1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-117.39130434782609" y="-171.42857142857142"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="BackBotton" width="170.5" height="170.5"/>
         <image name="logotip" width="682.5" height="682.5"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
