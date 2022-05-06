@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oDy-Ki-HtS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -330,12 +330,82 @@
                                 <color key="textColor" red="0.85239870029999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="equalCentering" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="wwr-YR-2SC">
+                                <rect key="frame" x="20" y="304" width="374" height="298"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Cs-9V-38X">
+                                        <rect key="frame" x="20" y="0.0" width="334" height="76"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Fast game" titlePadding="24" cornerStyle="large">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                            <attributedString key="attributedSubtitle">
+                                                <fragment content="easy">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="14" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GF2-JY-xSE">
+                                        <rect key="frame" x="20" y="111" width="334" height="76"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Family game" titlePadding="24" cornerStyle="large">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                            <attributedString key="attributedSubtitle">
+                                                <fragment content="medium">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="14" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="baseBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4UJ-qb-2WF">
+                                        <rect key="frame" x="20" y="222" width="334" height="76"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Brainstorm" titlePadding="24" cornerStyle="large">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                            <attributedString key="attributedSubtitle">
+                                                <fragment content="hard">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="14" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="baseBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="GF2-JY-xSE" firstAttribute="leading" secondItem="wwr-YR-2SC" secondAttribute="leading" constant="20" id="81H-8D-EY7"/>
+                                    <constraint firstItem="7Cs-9V-38X" firstAttribute="leading" secondItem="wwr-YR-2SC" secondAttribute="leading" constant="20" id="IKX-c7-CES"/>
+                                    <constraint firstAttribute="trailing" secondItem="GF2-JY-xSE" secondAttribute="trailing" constant="20" id="PmB-Je-LeG"/>
+                                    <constraint firstItem="4UJ-qb-2WF" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GF2-JY-xSE" secondAttribute="bottom" constant="5" id="eMF-tp-kO4"/>
+                                    <constraint firstItem="4UJ-qb-2WF" firstAttribute="leading" secondItem="wwr-YR-2SC" secondAttribute="leading" constant="20" id="kRt-GP-qkJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="4UJ-qb-2WF" secondAttribute="trailing" constant="20" id="pns-oE-BX3"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Cs-9V-38X" secondAttribute="trailing" constant="20" id="vtL-DY-tnz"/>
+                                    <constraint firstItem="GF2-JY-xSE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7Cs-9V-38X" secondAttribute="bottom" constant="5" id="y8Y-wm-SfI"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kSw-62-beg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="wwr-YR-2SC" firstAttribute="centerY" secondItem="kSw-62-beg" secondAttribute="centerY" id="0iv-J3-Aef"/>
                             <constraint firstItem="069-Bz-olb" firstAttribute="centerX" secondItem="kSw-62-beg" secondAttribute="centerX" id="9ab-J4-TjQ"/>
                             <constraint firstItem="069-Bz-olb" firstAttribute="top" secondItem="kSw-62-beg" secondAttribute="top" constant="20" id="fTy-EY-N4b"/>
+                            <constraint firstItem="kSw-62-beg" firstAttribute="trailing" secondItem="wwr-YR-2SC" secondAttribute="trailing" constant="20" id="fdc-0x-ik7"/>
+                            <constraint firstItem="wwr-YR-2SC" firstAttribute="centerX" secondItem="kSw-62-beg" secondAttribute="centerX" id="rOS-1P-Noq"/>
+                            <constraint firstItem="wwr-YR-2SC" firstAttribute="leading" secondItem="kSw-62-beg" secondAttribute="leading" constant="20" id="thg-Ly-FZx"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
