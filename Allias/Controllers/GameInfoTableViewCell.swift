@@ -8,13 +8,6 @@ class GameInfoTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         cellView.layer.cornerRadius = 25
     }
-    
-    func set(teamCell: GameTeam) {
-        self.teamNameLabel.text = teamCell.teamName
-        self.pointsLabel.text = teamCell.teamPoint
-    }
-    
 }
