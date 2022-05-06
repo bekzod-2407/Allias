@@ -81,7 +81,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FEv-pq-XIb" customClass="OptionUIView" customModule="AlliasApp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FEv-pq-XIb" customClass="OptionUIView" customModule="Allias" customModuleProvider="target">
                                 <rect key="frame" x="31.5" y="119" width="351" height="105"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minValue="0.0" maxValue="90" translatesAutoresizingMaskIntoConstraints="NO" id="wEl-4h-Pwz">
@@ -139,7 +139,7 @@
                                     <constraint firstItem="CrO-De-pRM" firstAttribute="top" secondItem="FEv-pq-XIb" secondAttribute="top" constant="11" id="yZg-Ed-8ga"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zOc-35-f8B" customClass="OptionUIView" customModule="AlliasApp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zOc-35-f8B" customClass="OptionUIView" customModule="Allias" customModuleProvider="target">
                                 <rect key="frame" x="31.5" y="241" width="351" height="105"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minValue="0.0" maxValue="90" translatesAutoresizingMaskIntoConstraints="NO" id="dTv-XX-KyS">
@@ -197,7 +197,7 @@
                                     <constraint firstAttribute="width" constant="351" id="rIq-LN-yZ0"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvV-ER-FYI" customClass="OptionUIView" customModule="AlliasApp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvV-ER-FYI" customClass="OptionUIView" customModule="Allias" customModuleProvider="target">
                                 <rect key="frame" x="31.5" y="363" width="351" height="124"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="9Hw-oG-8S6">
@@ -265,7 +265,7 @@
                                     <constraint firstAttribute="bottom" secondItem="Uy7-4P-DYW" secondAttribute="bottom" constant="10" id="rhJ-HR-obg"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdn-ie-WT1" customClass="OptionUIView" customModule="AlliasApp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdn-ie-WT1" customClass="OptionUIView" customModule="Allias" customModuleProvider="target">
                                 <rect key="frame" x="31.5" y="504" width="351" height="74"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="duration in seconds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mP8-tb-eBC">
