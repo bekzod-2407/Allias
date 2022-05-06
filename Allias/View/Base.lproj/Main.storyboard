@@ -71,7 +71,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="previousPageButtonPressed:" destination="Tst-v0-6hu" eventType="touchUpInside" id="aDj-QP-oMz"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="GoBackToMain" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="FXh-Zd-cnN"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fKR-Fa-BJA">
@@ -151,7 +150,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="playButtonPressed:" destination="Tst-v0-6hu" eventType="touchUpInside" id="g6l-tG-dnN"/>
-                                    <segue destination="z6f-Js-nz4" kind="presentation" identifier="PlayGame" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="fAZ-WZ-GxQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who will be the next" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IT-2J-vj7">
