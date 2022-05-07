@@ -100,7 +100,6 @@ class GameViewController: UIViewController {
         
     }
     
-    
     @objc func updateTimer() {
         secondsPassed += 1
         let nTempProcess = secondsPassed / Float(commonData.roundTime)

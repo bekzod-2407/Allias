@@ -19,11 +19,11 @@ class GameInfoViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func previousPageButtonPressed(_ sender: UIButton) {
-        
+        presentVC(identifierOfVC: "MainStoryboard")
     }
     
     @IBAction func playButtonPressed(_ sender: UIButton) {
-        
+        presentVC(identifierOfVC: "GameStoryboard")
     }
     
     func tableView(_ tableTeams: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,6 +57,15 @@ class GameInfoViewController: UIViewController, UITableViewDelegate, UITableView
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
         }
+    }
+    
+    //Перемещение по экранам
+    func presentVC(identifierOfVC: String){
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let destination = main.instantiateViewController(withIdentifier: identifierOfVC)
+        destination.modalPresentationStyle = .fullScreen
+        destination.modalTransitionStyle = .crossDissolve
+        self.present(destination, animated: true, completion: nil)
     }
     
 }

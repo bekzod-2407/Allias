@@ -11,14 +11,14 @@ final class SingletonStruct {
     
     static var shared = SingletonStruct()
     
-    var roundTime: Int = 60
+    var roundTime: Int = 1
     var wordCount: Int = 0
     //частота показа задания
     var howOftenTask: Int = 3
     //показывать задание?
     var showTask: Bool = false
     
-    //!!!!!!!(ножна функция на заполнение или заполение из DictionaryView)
+    //!!!!!!!(нужна функция на заполнение или заполение из DictionaryView)
     //массив слов выбранного словаря
     //var tempLocalDictionary: Array<String> = []
     var tempLocalDictionary = ["кран", "лопата", "овца", "учитель", "человек", "завтрак", "дневник", "паровоз"]
@@ -102,5 +102,6 @@ final class SingletonStruct {
         
         return next_word
     }
+    
 }
 

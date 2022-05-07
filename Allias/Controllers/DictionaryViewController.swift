@@ -7,31 +7,11 @@
 
 import UIKit
 
-class GradientView: UIView {
-    
-    private let gradientLayer = CAGradientLayer()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setupGradient()
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        gradientLayer.frame = bounds
-    }
-    
-    private func setupGradient() {
-        self.layer.addSublayer(gradientLayer)
-        gradientLayer.colors = [UIColor.systemIndigo.cgColor, UIColor.purple.cgColor]
-    }
-}
 
 class DictionaryViewController: UIViewController {
+    
+    let localDict = LocalDictionary()
+    var commonData = SingletonStruct.shared
     
     @IBOutlet weak var EasyWords: UIButton!
     @IBOutlet weak var MediumWords: UIButton!
@@ -41,8 +21,18 @@ class DictionaryViewController: UIViewController {
     @IBOutlet weak var mvCount: UILabel!
     @IBOutlet weak var hwCount: UILabel!
     
-    let localDict = LocalDictionary()
-    var commonData = SingletonStruct.shared
+    @IBAction func easyWordsActionButton(_ sender: UIButton) {
+        presentVC(identifierOfVC: "OptionStoryboard")
+    }
+    
+    @IBAction func mediumWordsActionButton(_ sender: UIButton) {
+        presentVC(identifierOfVC: "OptionStoryboard")
+    }
+    
+    @IBAction func hardWordsActionButton(_ sender: UIButton) {
+        presentVC(identifierOfVC: "OptionStoryboard")
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,5 +62,14 @@ class DictionaryViewController: UIViewController {
     func buttonsParametrs(_ obj: UIButton) {
         obj.layer.cornerRadius = obj.bounds.height / 6
         obj.clipsToBounds = true
+    }
+    
+    //Перемещение по экранам
+    func presentVC(identifierOfVC: String){
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let destination = main.instantiateViewController(withIdentifier: identifierOfVC)
+        destination.modalPresentationStyle = .fullScreen
+        destination.modalTransitionStyle = .crossDissolve
+        self.present(destination, animated: true, completion: nil)
     }
 }

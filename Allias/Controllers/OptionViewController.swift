@@ -10,10 +10,17 @@ import UIKit
 class OptionViewController: UIViewController {
     
     var singleShared = SingletonStruct.shared
-    
-    
+        
     @IBOutlet weak var roundTimeValueLabel: UILabel!
     @IBOutlet weak var wordCountValueLabel: UILabel!
+        
+    @IBAction func backToRootControllerButton(_ sender: UIButton) {
+        presentVC(identifierOfVC: "MainStoryboard")
+    }
+    
+    @IBAction func toDictionaryControllerButton(_ sender: UIButton) {
+        presentVC(identifierOfVC: "DictionaryStoryboard")
+    }
     
     @IBAction func roundTimeSlider(_ sender: UISlider) {
         singleShared.roundTime = Int(sender.value)
@@ -33,6 +40,15 @@ class OptionViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    //Перемещение по экранам
+    func presentVC(identifierOfVC: String){
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let destination = main.instantiateViewController(withIdentifier: identifierOfVC)
+        destination.modalPresentationStyle = .fullScreen
+        destination.modalTransitionStyle = .crossDissolve
+        self.present(destination, animated: true, completion: nil)
     }
 
 }
