@@ -30,45 +30,46 @@ class GameViewController: UIViewController {
         buttonsParametrs(WordsButton)
         buttonsParametrs(PrevWordsButton)
         
+        //получение первого словаа
+        WordsButton.setTitle(commonData.nextWord(), for: .normal)
+        
         // Загрузка таймера
         timer.invalidate()
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
     
-    //Отрисоква углов унопок
-    func buttonsParametrs(_ obj: UIButton) {
-        obj.layer.cornerRadius = obj.bounds.height / 6
-        obj.clipsToBounds = true
-        
-    }
     
-    @objc func updateTimer() {
-        secondsPassed += 1
-        let nTempProcess = secondsPassed / Float(commonData.roundTime)
-        
-        if secondsPassed <= Float(commonData.roundTime) {
-            ProgressBar.progress = nTempProcess
-        } else {
-            timer.invalidate()
-            // По завершении таймера передача countPoints наружу
-            commonData.addPoints(countPoints)
-            // Возращение на GameInfoView
-        }
-    }
     
     //Обработка кнопок ДА/НЕТ
     @IBAction func clickOnButton(_ sender: UIButton) {
         if sender == NoButton {
             playSound("no")
-            countPoints -= 1
+            if commonData.showTask {
+                countPoints -= 3
+            } else {
+                countPoints -= 1
+            }
         } else if sender == YesBotton {
             playSound("yes")
-            countPoints += 1
+            if commonData.showTask {
+                countPoints += 3
+            } else {
+                countPoints += 1
+            }
         }
         
         // Определение следующего слова
-        //WordsButton.currentTitle = nextWord()
+        WordsButton.setTitle(commonData.nextWord(), for: .normal)
+        
+        if commonData.showTask {
+            TaskLabel.text = commonData.taskDictionary[commonData.tempTasksIdx]
+            TaskLabel.alpha = 1
+        } else {
+            TaskLabel.alpha = 0
+        }
+        print("countPoints \(countPoints)")
     }
+    
     
     //Проигрывание музыки
     func playSound(_ soundCode: String) {
@@ -90,17 +91,27 @@ class GameViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
-
     
     
-    
-    /*
-    // MARK: - Navigation
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //Отрисоква углов унопок
+    func buttonsParametrs(_ obj: UIButton) {
+        obj.layer.cornerRadius = obj.bounds.height / 6
+        obj.clipsToBounds = true
+        
     }
-    */
-
+    
+    
+    @objc func updateTimer() {
+        secondsPassed += 1
+        let nTempProcess = secondsPassed / Float(commonData.roundTime)
+        
+        if secondsPassed <= Float(commonData.roundTime) {
+            ProgressBar.progress = nTempProcess
+        } else {
+            timer.invalidate()
+            // По завершении таймера передача countPoints наружу
+            commonData.addPoints(countPoints)
+            // Возращение на GameInfoView
+        }
+    }
 }

@@ -25,7 +25,8 @@ class OptionViewController: UIViewController {
         wordCountValueLabel.text = String(singleShared.wordCount)
     }
     
-    @IBAction func tasksSlider(_ sender: Any) {
+    @IBAction func tasksSlider(_ sender: UISlider) {
+        singleShared.changeOftenTask(Int(sender.value))
     }
     
     override func viewDidLoad() {
