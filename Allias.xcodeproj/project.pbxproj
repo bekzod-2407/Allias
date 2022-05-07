@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		35E3624C2823CB8800CCBEDF /* GameInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E3624B2823CB8800CCBEDF /* GameInfoTableViewCell.swift */; };
+		35E362522826DE2000CCBEDF /* NewTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E362512826DE2000CCBEDF /* NewTeamViewController.swift */; };
 		8F309E3028230095000EAAFA /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F309E2F28230095000EAAFA /* Singleton.swift */; };
 		8F309E33282300FC000EAAFA /* GradientUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F309E32282300FC000EAAFA /* GradientUIView.swift */; };
 		8FD839212826A8980085357C /* CellsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD839202826A8970085357C /* CellsUIView.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		35E3624B2823CB8800CCBEDF /* GameInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoTableViewCell.swift; sourceTree = "<group>"; };
+		35E362512826DE2000CCBEDF /* NewTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTeamViewController.swift; sourceTree = "<group>"; };
 		8F309E2F28230095000EAAFA /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Singleton.swift; path = Allias/Controllers/Singleton.swift; sourceTree = SOURCE_ROOT; };
 		8F309E32282300FC000EAAFA /* GradientUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientUIView.swift; sourceTree = "<group>"; };
 		8FD839202826A8970085357C /* CellsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsUIView.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				CEA7E652282166D9004C4CAA /* OptionViewController.swift */,
 				CEA7E656282167CA004C4CAA /* GameViewController.swift */,
 				CEA7E650282165F9004C4CAA /* GameInfoViewController.swift */,
+				35E362512826DE2000CCBEDF /* NewTeamViewController.swift */,
 				35E3624B2823CB8800CCBEDF /* GameInfoTableViewCell.swift */,
 			);
 			path = Controllers;
@@ -224,6 +227,7 @@
 				A41E65F628262985008BCE3C /* LocalDictionary.swift in Sources */,
 				8F309E3028230095000EAAFA /* Singleton.swift in Sources */,
 				CEA7E6552821673F004C4CAA /* DictionaryViewController.swift in Sources */,
+				35E362522826DE2000CCBEDF /* NewTeamViewController.swift in Sources */,
 				CEA7E651282165F9004C4CAA /* GameInfoViewController.swift in Sources */,
 				8F309E33282300FC000EAAFA /* GradientUIView.swift in Sources */,
 				CEA7E653282166D9004C4CAA /* OptionViewController.swift in Sources */,

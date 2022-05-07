@@ -26,6 +26,8 @@ class GameInfoViewController: UIViewController, UITableViewDelegate, UITableView
         presentVC(identifierOfVC: "GameStoryboard")
     }
     
+    @IBAction func cancelAction(_segue: UIStoryboardSegue) {}
+    
     func tableView(_ tableTeams: UITableView, numberOfRowsInSection section: Int) -> Int {
         return singleShared.teamArray.count
     }
