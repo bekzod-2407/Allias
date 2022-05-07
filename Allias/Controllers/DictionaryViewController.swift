@@ -21,18 +21,19 @@ class DictionaryViewController: UIViewController {
     @IBOutlet weak var mvCount: UILabel!
     @IBOutlet weak var hwCount: UILabel!
     
+    
     @IBAction func easyWordsActionButton(_ sender: UIButton) {
+        commonData.tempLocalDictionary = LocalDictionary().wordsArrayHard.shuffled()
         presentVC(identifierOfVC: "OptionStoryboard")
-        print(commonData.roundTime)
     }
     
     @IBAction func mediumWordsActionButton(_ sender: UIButton) {
+        commonData.tempLocalDictionary = LocalDictionary().wordsArrayMedium.shuffled()
         presentVC(identifierOfVC: "OptionStoryboard")
-        commonData.roundTime += 1
-        print(commonData.roundTime)
     }
     
     @IBAction func hardWordsActionButton(_ sender: UIButton) {
+        commonData.tempLocalDictionary = LocalDictionary().wordsArrayHard.shuffled()
         presentVC(identifierOfVC: "OptionStoryboard")
 
     }

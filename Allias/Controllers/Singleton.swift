@@ -14,32 +14,32 @@ final class SingletonStruct {
     var roundTime: Int = 2
     var wordCount: Int = 20
   
-    //частота показа задания
-    var howOftenTask: Int = 1
+    //Пастота показа задания
+    var howOftenTask: Int = 3
     
-    //показывать задание?
+    //Показывать задание?
     var showTask: Bool = false
     
     //!!!!!!!(нужна функция на заполнение или заполение из DictionaryView)
     //массив слов выбранного словаря
     //var tempLocalDictionary: Array<String> = []
-    var tempLocalDictionary = ["кран", "лопата", "овца", "учитель", "человек", "завтрак", "дневник", "паровоз"]
+    var tempLocalDictionary = LocalDictionary().wordsArrayEasy.shuffled()
     var tempWordIdx: Int = 0
     
     //массив действий к словам
     //var taskDictionary: Array<String> = []
-    var taskDictionary = ["Стоя на одной ноге", "Не используя глаголы", "Не говори, а покажи"]
+    var taskDictionary: Array = LocalDictionary().taskDictionary.shuffled()
     var tempTasksIdx: Int = 0
     
-    //команды
+    //Комманды
     var teamArray: Array = ["❤️ Lovers", "💀 DeathEaters", "🤖 Robots"]
     var teamDictionary: Dictionary = ["❤️ Lovers": 0, "💀 DeathEaters": 0, "🤖 Robots": 0]
     
-    //текущая активная комманда
+    //Текущая активная комманда
     var activCommandIdx: Int = 0
     
     
-    //функция для определения частоты показа задания
+    //Функция для определения частоты показа задания
     func changeOftenTask(_ tempVal : Int) {
         var retVal = 0
         

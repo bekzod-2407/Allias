@@ -34,6 +34,8 @@ class GameViewController: UIViewController {
         buttonsParametrs(WordsButton)
         buttonsParametrs(PrevWordsButton)
         
+        wordsButtonTextCustomize()
+        
         //Получение первого слова
         WordsButton.setTitle(commonData.nextWord(), for: .normal)
         
@@ -131,6 +133,13 @@ class GameViewController: UIViewController {
                 commonData.activCommandIdx += 1
             }
         }
+    }
+    
+    //Наастройка текста слов
+    func wordsButtonTextCustomize() {
+        WordsButton.titleLabel?.numberOfLines = 3
+        WordsButton.titleLabel?.lineBreakMode = .byWordWrapping
+        WordsButton.titleLabel?.textAlignment = .center
     }
     
     //Перемещение по экранам

@@ -30,11 +30,11 @@ class WinnerViewController: UIViewController {
     }
     
     func resetData() {
-        commonData.roundTime = 3
-        commonData.wordCount = 6
-        commonData.howOftenTask = 1
-        commonData.teamArray = ["one", "two"]
-        commonData.teamDictionary = ["one" : 0,"two" : 0]
+        commonData.roundTime = 60
+        commonData.wordCount = 20
+        commonData.howOftenTask = 3
+        commonData.teamArray = [String]()
+        commonData.teamDictionary = [String: Int]()
         commonData.activCommandIdx = 0
         presentVC(identifierOfVC: "MainStoryboard")
     }

@@ -14,6 +14,8 @@ class GameInfoViewController: UIViewController, UITableViewDelegate, UITableView
         
         tableTeams.delegate = self
         tableTeams.dataSource = self
+        
+        
         tableTeamCustomization()
 
     }
@@ -43,6 +45,7 @@ class GameInfoViewController: UIViewController, UITableViewDelegate, UITableView
 
         }
         cell.layer.backgroundColor = UIColor.clear.cgColor
+        nextTeamToPlay.text = "Team \(commonData.teamArray[commonData.activCommandIdx])\n would play next!"
         return cell
     }
     
