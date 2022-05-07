@@ -11,7 +11,7 @@ final class SingletonStruct {
     
     static var shared = SingletonStruct()
     
-    var roundTime: Int = 1
+    var roundTime: Int = 20
     var wordCount: Int = 0
     //частота показа задания
     var howOftenTask: Int = 3

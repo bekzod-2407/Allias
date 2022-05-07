@@ -7,7 +7,7 @@ class GameInfoViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var nextTeamToPlay: UILabel!
     @IBOutlet weak var playButton: UIButton!
     
-    var singleShared = SingletonStruct()
+    var commonData = SingletonStruct()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class GameInfoViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableTeams: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return singleShared.teamArray.count
+        return commonData.teamArray.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -36,9 +36,9 @@ class GameInfoViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableTeams: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableTeams.dequeueReusableCell(withIdentifier: "gameInfoCell", for: indexPath) as! GameInfoTableViewCell
-        let teamCell = singleShared.teamArray[indexPath.row]
+        let teamCell = commonData.teamArray[indexPath.row]
         cell.teamNameLabel.text = teamCell
-        if let pointTeam = singleShared.teamDictionary[teamCell] {
+        if let pointTeam = commonData.teamDictionary[teamCell] {
             cell.pointsLabel.text = String(pointTeam)
         }
         cell.layer.backgroundColor = UIColor.clear.cgColor
@@ -53,7 +53,7 @@ class GameInfoViewController: UIViewController, UITableViewDelegate, UITableView
         
         if editingStyle == .delete {
             tableView.beginUpdates()
-            singleShared.teamArray.remove(at: indexPath.row)
+            commonData.teamArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
         }

@@ -9,11 +9,10 @@ import UIKit
 
 class OptionViewController: UIViewController {
     
-    var singleShared = SingletonStruct.shared
+    var commonData = SingletonStruct.shared
         
     @IBOutlet weak var roundTimeValueLabel: UILabel!
-    @IBOutlet weak var wordCountValueLabel: UILabel!
-        
+    @IBOutlet weak var wordCountValueLabel: UILabel!        
     @IBAction func backToRootControllerButton(_ sender: UIButton) {
         presentVC(identifierOfVC: "MainStoryboard")
     }
@@ -23,17 +22,17 @@ class OptionViewController: UIViewController {
     }
     
     @IBAction func roundTimeSlider(_ sender: UISlider) {
-        singleShared.roundTime = Int(sender.value)
-        roundTimeValueLabel.text = String(singleShared.roundTime)
+        commonData.roundTime = Int(sender.value)
+        roundTimeValueLabel.text = String(commonData.roundTime)
     }
     
     @IBAction func wordCountSLider(_ sender: UISlider) {
-        singleShared.wordCount = Int(sender.value)
-        wordCountValueLabel.text = String(singleShared.wordCount)
+        commonData.wordCount = Int(sender.value)
+        wordCountValueLabel.text = String(commonData.wordCount)
     }
     
     @IBAction func tasksSlider(_ sender: UISlider) {
-        singleShared.changeOftenTask(Int(sender.value))
+        commonData.changeOftenTask(Int(sender.value))
     }
     
     override func viewDidLoad() {

@@ -46,17 +46,7 @@ class DictionaryViewController: UIViewController {
         hwCount.text = String(localDict.wordsArrayHard.count)
     }
     
-    @IBAction func onButtonClick(_ sender: UIButton) {
-        if sender == EasyWords {
-            commonData.tempLocalDictionary = localDict.wordsArrayEasy
-        } else if sender == MediumWords {
-            commonData.tempLocalDictionary = localDict.wordsArrayMedium
-        } else if sender == HardWords {
-            commonData.tempLocalDictionary = localDict.wordsArrayHard
-        }
-        
-        self.dismiss(animated: true)
-    }
+
     
     //Отрисоква углов унопок
     func buttonsParametrs(_ obj: UIButton) {

@@ -8,7 +8,7 @@ import UIKit
 import AVFoundation
 
 class GameViewController: UIViewController {
-
+    
     @IBOutlet weak var WordsButton: UIButton!
     @IBOutlet weak var PrevWordsButton: UIButton!
     @IBOutlet weak var ProgressBar: UIProgressView!
@@ -18,7 +18,7 @@ class GameViewController: UIViewController {
     
     var timer = Timer()
     var player: AVAudioPlayer?
-
+    
     var commonData = SingletonStruct.shared
     
     var countPoints: Int = 0
@@ -30,15 +30,13 @@ class GameViewController: UIViewController {
         buttonsParametrs(WordsButton)
         buttonsParametrs(PrevWordsButton)
         
-        //получение первого словаа
+        //Получение первого слова
         WordsButton.setTitle(commonData.nextWord(), for: .normal)
         
-        // Загрузка таймера
+        //Загрузка таймера
         timer.invalidate()
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
-    
-    
     
     //Обработка кнопок ДА/НЕТ
     @IBAction func clickOnButton(_ sender: UIButton) {
@@ -70,35 +68,34 @@ class GameViewController: UIViewController {
         print("countPoints \(countPoints)")
     }
     
-    
     //Проигрывание музыки
     func playSound(_ soundCode: String) {
         //поиск файла по URL
         guard let url = Bundle.main.url(forResource: soundCode, withExtension: "mp3") else { return }
-
+        
         do {
             //включаем звук, если телефон в вибро
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
             try AVAudioSession.sharedInstance().setActive(true)
-
+            
             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-
+            
             guard let player = player else { return }
-
+            
             player.play()
-
+            
         } catch let error {
             print(error.localizedDescription)
         }
     }
     
-    
-    //Отрисоква углов унопок
+    //Отрисовка углов унопок
     func buttonsParametrs(_ obj: UIButton) {
         obj.layer.cornerRadius = obj.bounds.height / 6
         obj.clipsToBounds = true
         
     }
+    
     
     @objc func updateTimer() {
         secondsPassed += 1
@@ -111,6 +108,19 @@ class GameViewController: UIViewController {
             // По завершении таймера передача countPoints наружу
             commonData.addPoints(countPoints)
             // Возращение на GameInfoView
+            presentVC(identifierOfVC: "GameInfoStoryboard")
+            //Выдаем очки комманде
+            commonData.teamDictionary[""]
+            
         }
+    }
+    
+    //Перемещение по экранам
+    func presentVC(identifierOfVC: String){
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let destination = main.instantiateViewController(withIdentifier: identifierOfVC)
+        destination.modalPresentationStyle = .fullScreen
+        destination.modalTransitionStyle = .crossDissolve
+        self.present(destination, animated: true, completion: nil)
     }
 }

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -991,7 +993,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="NoBotton"/>
                                                         <connections>
-                                                            <action selector="clickOnButton:" destination="z6f-Js-nz4" eventType="touchUpInside" id="cGq-8n-mTs"/>
+                                                            <action selector="clickOnButton:" destination="z6f-Js-nz4" eventType="touchUpInside" id="o4P-Z6-IxW"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZl-YZ-9cr">
@@ -999,7 +1001,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="YesBotton"/>
                                                         <connections>
-                                                            <action selector="clickOnButton:" destination="z6f-Js-nz4" eventType="touchUpInside" id="Vbu-oZ-w9b"/>
+                                                            <action selector="clickOnButton:" destination="z6f-Js-nz4" eventType="touchUpInside" id="lg9-jN-KGC"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -1037,7 +1039,7 @@
                         <outlet property="ProgressBar" destination="N3P-fE-QZm" id="kyw-Mm-xVr"/>
                         <outlet property="TaskLabel" destination="3MO-bU-8JS" id="k0H-Ys-v5b"/>
                         <outlet property="WordsButton" destination="rJq-Dg-YQ6" id="VRd-oj-7KG"/>
-                        <outlet property="YesBotton" destination="gZl-YZ-9cr" id="C6N-MM-0Kq"/>
+                        <outlet property="YesBotton" destination="gZl-YZ-9cr" id="WkJ-E5-2sX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQ7-hW-Ohi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1052,11 +1054,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1196"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulk-tW-sQV">
+                                <rect key="frame" x="11" y="70" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Mb7-H1-RcA"/>
+                                    <constraint firstAttribute="height" constant="30" id="W5n-nN-SpB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="large"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="pWC-hF-8gw" eventType="touchUpInside" id="209-Wg-5bA"/>
+                                    <action selector="backToRootControllerButton:" destination="SvG-Ga-Qw5" eventType="touchUpInside" id="PCD-j6-cFQ"/>
+                                </connections>
+                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUv-xa-GFQ">
-                                <rect key="frame" x="20" y="64" width="374" height="1098"/>
+                                <rect key="frame" x="20" y="114" width="374" height="1048"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BNH-vZ-UDz">
-                                        <rect key="frame" x="0.0" y="0.0" width="366" height="1090"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="1040"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">СКАЖИ ИНАЧЕ - игра разъяснения слов, в которой принимают участие команды, состоящие из двух человек. Минимальное количество игроков 4 человека, максимальному предела нет.
 
@@ -1101,8 +1119,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="aUv-xa-GFQ" firstAttribute="leading" secondItem="kLw-OB-XwU" secondAttribute="leadingMargin" id="9fQ-gB-JQz"/>
-                            <constraint firstItem="aUv-xa-GFQ" firstAttribute="top" secondItem="let-JL-Xla" secondAttribute="top" constant="20" id="G40-Xm-H1A"/>
                             <constraint firstItem="aUv-xa-GFQ" firstAttribute="bottom" secondItem="let-JL-Xla" secondAttribute="bottom" id="IQu-LQ-KT0"/>
+                            <constraint firstItem="aUv-xa-GFQ" firstAttribute="top" secondItem="let-JL-Xla" secondAttribute="top" constant="70" id="K1Z-Jd-uy8"/>
+                            <constraint firstItem="Ulk-tW-sQV" firstAttribute="top" secondItem="kLw-OB-XwU" secondAttribute="top" constant="70" id="LhD-VH-sFp"/>
+                            <constraint firstItem="Ulk-tW-sQV" firstAttribute="leading" secondItem="kLw-OB-XwU" secondAttribute="leading" constant="11" id="XEU-FA-51e"/>
                             <constraint firstItem="aUv-xa-GFQ" firstAttribute="trailing" secondItem="kLw-OB-XwU" secondAttribute="trailingMargin" id="aZW-g2-5lm"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
