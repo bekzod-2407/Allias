@@ -15,6 +15,7 @@ final class SingletonStruct {
     var wordCount: Int = 0
     var taskRateExplanation: Int = 0
     var activCommand: String?
+    var tempLocalDictionary: Array<String> = []
     
     func setActivCommand (_ commandName: String){
         activCommand = commandName

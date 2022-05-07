@@ -10,6 +10,9 @@
 		35E3624C2823CB8800CCBEDF /* GameInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E3624B2823CB8800CCBEDF /* GameInfoTableViewCell.swift */; };
 		8F309E3028230095000EAAFA /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F309E2F28230095000EAAFA /* Singleton.swift */; };
 		8F309E33282300FC000EAAFA /* GradientUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F309E32282300FC000EAAFA /* GradientUIView.swift */; };
+		A41E65ED28262808008BCE3C /* yes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A41E65EF28262808008BCE3C /* yes.mp3 */; };
+		A41E65F22826281E008BCE3C /* no.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A41E65F42826281E008BCE3C /* no.mp3 */; };
+		A41E65F628262985008BCE3C /* LocalDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41E65F528262985008BCE3C /* LocalDictionary.swift */; };
 		CEA7E63A2820F43C004C4CAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7E6392820F43C004C4CAA /* AppDelegate.swift */; };
 		CEA7E63C2820F43C004C4CAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7E63B2820F43C004C4CAA /* SceneDelegate.swift */; };
 		CEA7E63E2820F43C004C4CAA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7E63D2820F43C004C4CAA /* MainViewController.swift */; };
@@ -28,6 +31,9 @@
 		35E3624B2823CB8800CCBEDF /* GameInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoTableViewCell.swift; sourceTree = "<group>"; };
 		8F309E2F28230095000EAAFA /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Singleton.swift; path = Allias/Controllers/Singleton.swift; sourceTree = SOURCE_ROOT; };
 		8F309E32282300FC000EAAFA /* GradientUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientUIView.swift; sourceTree = "<group>"; };
+		A41E65EE28262808008BCE3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Base; path = Base.lproj/yes.mp3; sourceTree = "<group>"; };
+		A41E65F32826281E008BCE3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Base; path = Base.lproj/no.mp3; sourceTree = "<group>"; };
+		A41E65F528262985008BCE3C /* LocalDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalDictionary.swift; path = Allias/LocalDictionary.swift; sourceTree = SOURCE_ROOT; };
 		CEA7E6362820F43C004C4CAA /* Allias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Allias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA7E6392820F43C004C4CAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEA7E63B2820F43C004C4CAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +69,15 @@
 			path = SubControllers;
 			sourceTree = "<group>";
 		};
+		A41E65EA282627EC008BCE3C /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				A41E65F42826281E008BCE3C /* no.mp3 */,
+				A41E65EF28262808008BCE3C /* yes.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		CEA7E62D2820F43C004C4CAA = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +98,7 @@
 		CEA7E6382820F43C004C4CAA /* Allias */ = {
 			isa = PBXGroup;
 			children = (
+				A41E65EA282627EC008BCE3C /* Sounds */,
 				CEA7E6392820F43C004C4CAA /* AppDelegate.swift */,
 				CEA7E63B2820F43C004C4CAA /* SceneDelegate.swift */,
 				CEA7E64F28216017004C4CAA /* Model */,
@@ -122,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				8F309E2F28230095000EAAFA /* Singleton.swift */,
+				A41E65F528262985008BCE3C /* LocalDictionary.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,8 +201,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A41E65ED28262808008BCE3C /* yes.mp3 in Resources */,
 				CEA7E65E28218FF8004C4CAA /* .gitignore in Resources */,
 				CEA7E6462820F43D004C4CAA /* LaunchScreen.storyboard in Resources */,
+				A41E65F22826281E008BCE3C /* no.mp3 in Resources */,
 				CEA7E6432820F43D004C4CAA /* Assets.xcassets in Resources */,
 				CEA7E6412820F43C004C4CAA /* Main.storyboard in Resources */,
 			);
@@ -199,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA7E657282167CA004C4CAA /* GameViewController.swift in Sources */,
+				A41E65F628262985008BCE3C /* LocalDictionary.swift in Sources */,
 				8F309E3028230095000EAAFA /* Singleton.swift in Sources */,
 				CEA7E6552821673F004C4CAA /* DictionaryViewController.swift in Sources */,
 				CEA7E651282165F9004C4CAA /* GameInfoViewController.swift in Sources */,
@@ -215,6 +235,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		A41E65EF28262808008BCE3C /* yes.mp3 */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A41E65EE28262808008BCE3C /* Base */,
+			);
+			name = yes.mp3;
+			sourceTree = "<group>";
+		};
+		A41E65F42826281E008BCE3C /* no.mp3 */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A41E65F32826281E008BCE3C /* Base */,
+			);
+			name = no.mp3;
+			sourceTree = "<group>";
+		};
 		CEA7E63F2820F43C004C4CAA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
