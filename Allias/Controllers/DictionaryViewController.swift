@@ -33,21 +33,44 @@ class GradientView: UIView {
 
 class DictionaryViewController: UIViewController {
     
+    @IBOutlet weak var EasyWords: UIButton!
+    @IBOutlet weak var MediumWords: UIButton!
+    @IBOutlet weak var HardWords: UIButton!
+    
+    @IBOutlet weak var ewCount: UILabel!
+    @IBOutlet weak var mvCount: UILabel!
+    @IBOutlet weak var hwCount: UILabel!
+    
+    let localDict = LocalDictionary()
+    var commonData = SingletonStruct.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        buttonsParametrs(EasyWords)
+        buttonsParametrs(MediumWords)
+        buttonsParametrs(HardWords)
+        
+        ewCount.text = String(localDict.wordsArrayEasy.count)
+        mvCount.text = String(localDict.wordsArrayMedium.count)
+        hwCount.text = String(localDict.wordsArrayHard.count)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onButtonClick(_ sender: UIButton) {
+        if sender == EasyWords {
+            commonData.tempLocalDictionary = localDict.wordsArrayEasy
+        } else if sender == MediumWords {
+            commonData.tempLocalDictionary = localDict.wordsArrayMedium
+        } else if sender == HardWords {
+            commonData.tempLocalDictionary = localDict.wordsArrayHard
+        }
+        
+        self.dismiss(animated: true)
     }
-    */
-
+    
+    //Отрисоква углов унопок
+    func buttonsParametrs(_ obj: UIButton) {
+        obj.layer.cornerRadius = obj.bounds.height / 6
+        obj.clipsToBounds = true
+    }
 }
