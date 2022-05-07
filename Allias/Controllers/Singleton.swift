@@ -11,10 +11,12 @@ final class SingletonStruct {
     
     static var shared = SingletonStruct()
     
-    var roundTime: Int = 20
-    var wordCount: Int = 0
+    var roundTime: Int = 2
+    var wordCount: Int = 20
+  
     //частота показа задания
-    var howOftenTask: Int = 3
+    var howOftenTask: Int = 1
+    
     //показывать задание?
     var showTask: Bool = false
     
@@ -30,8 +32,9 @@ final class SingletonStruct {
     var tempTasksIdx: Int = 0
     
     //команды
-    var teamArray: Array = ["❤️ Lovers", "💀 DeathEaters", "🤖 Robots", "🧔🏻‍♂️ Mens", "👯‍♀️ Women"]
-    var teamDictionary: Dictionary = ["❤️ Lovers": 0, "💀 DeathEaters": 0, "🤖 Robots": 0, "🧔🏻‍♂️ Mens": 0, "👯‍♀️ Women": 0]
+    var teamArray: Array = ["❤️ Lovers", "💀 DeathEaters", "🤖 Robots"]
+    var teamDictionary: Dictionary = ["❤️ Lovers": 0, "💀 DeathEaters": 0, "🤖 Robots": 0]
+    
     //текущая активная комманда
     var activCommandIdx: Int = 0
     
@@ -56,22 +59,6 @@ final class SingletonStruct {
     }
     
     
-    //функция для смены активной команды
-    func setActivCommand (_ commandName: String){
-        activCommandIdx += 1
-        
-        if activCommandIdx > teamArray.count{
-            activCommandIdx = 0
-        }
-    }
-    
-    
-    //функция для обновления баллов команды
-    func addPoints(_ tempPoints: Int){
-        teamDictionary[teamArray[activCommandIdx]] = (teamDictionary[teamArray[activCommandIdx]]) ?? 0 + tempPoints
-    }
-    
-    
     //фунцкция для определения надо ли выводить задание
     func checkTask(){
         if tempWordIdx % howOftenTask == 0 && tempWordIdx != 0 {
@@ -87,7 +74,6 @@ final class SingletonStruct {
         
         print("showTask \(showTask)")
     }
-    
     
     //функция для получения след. слова
     func nextWord() -> String {

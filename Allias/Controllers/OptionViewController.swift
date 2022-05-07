@@ -9,7 +9,7 @@ import UIKit
 
 class OptionViewController: UIViewController {
     
-    var commonData = SingletonStruct.shared
+    let commonData = SingletonStruct.shared
         
     @IBOutlet weak var roundTimeValueLabel: UILabel!
     @IBOutlet weak var wordCountValueLabel: UILabel!        
@@ -38,7 +38,6 @@ class OptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     //Перемещение по экранам

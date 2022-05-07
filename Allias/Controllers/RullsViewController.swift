@@ -16,10 +16,8 @@ class RullsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
-    
     //Перемещение по экранам
     func presentVC(identifierOfVC: String){
         let main = UIStoryboard(name: "Main", bundle: nil)

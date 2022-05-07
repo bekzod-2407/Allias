@@ -16,6 +16,10 @@ class GameViewController: UIViewController {
     @IBOutlet weak var NoButton: UIButton!
     @IBOutlet weak var YesBotton: UIButton!
     
+    @IBAction func yesActionButton(_ sender: UIButton) {
+
+    }
+    
     var timer = Timer()
     var player: AVAudioPlayer?
     
@@ -40,6 +44,7 @@ class GameViewController: UIViewController {
     
     //Обработка кнопок ДА/НЕТ
     @IBAction func clickOnButton(_ sender: UIButton) {
+        
         if sender == NoButton {
             playSound("no")
             if commonData.showTask {
@@ -65,7 +70,7 @@ class GameViewController: UIViewController {
         } else {
             TaskLabel.alpha = 0
         }
-        print("countPoints \(countPoints)")
+
     }
     
     //Проигрывание музыки
@@ -105,13 +110,26 @@ class GameViewController: UIViewController {
             ProgressBar.progress = nTempProcess
         } else {
             timer.invalidate()
-            // По завершении таймера передача countPoints наружу
-            commonData.addPoints(countPoints)
-            // Возращение на GameInfoView
-            presentVC(identifierOfVC: "GameInfoStoryboard")
-            //Выдаем очки комманде
-            commonData.teamDictionary[""]
             
+            print("Index is \(commonData.activCommandIdx)")
+            
+            //Выдаем очки комманде
+            commonData.teamDictionary[commonData.teamArray[commonData.activCommandIdx]]! += countPoints
+
+          
+            // Возращение на GameInfoView или WinnerView
+            if commonData.teamDictionary[commonData.teamArray[commonData.activCommandIdx]]! >= commonData.wordCount {
+                presentVC(identifierOfVC: "WinnerStoryboard")
+            } else {
+                presentVC(identifierOfVC: "GameInfoStoryboard")
+            }
+            
+            //Cмена активной команды
+            if commonData.activCommandIdx == commonData.teamArray.count - 1{
+                commonData.activCommandIdx = 0
+            } else {
+                commonData.activCommandIdx += 1
+            }
         }
     }
     
@@ -122,5 +140,6 @@ class GameViewController: UIViewController {
         destination.modalPresentationStyle = .fullScreen
         destination.modalTransitionStyle = .crossDissolve
         self.present(destination, animated: true, completion: nil)
+
     }
 }

@@ -23,14 +23,18 @@ class DictionaryViewController: UIViewController {
     
     @IBAction func easyWordsActionButton(_ sender: UIButton) {
         presentVC(identifierOfVC: "OptionStoryboard")
+        print(commonData.roundTime)
     }
     
     @IBAction func mediumWordsActionButton(_ sender: UIButton) {
         presentVC(identifierOfVC: "OptionStoryboard")
+        commonData.roundTime += 1
+        print(commonData.roundTime)
     }
     
     @IBAction func hardWordsActionButton(_ sender: UIButton) {
         presentVC(identifierOfVC: "OptionStoryboard")
+
     }
 
     
@@ -61,5 +65,6 @@ class DictionaryViewController: UIViewController {
         destination.modalPresentationStyle = .fullScreen
         destination.modalTransitionStyle = .crossDissolve
         self.present(destination, animated: true, completion: nil)
+
     }
 }

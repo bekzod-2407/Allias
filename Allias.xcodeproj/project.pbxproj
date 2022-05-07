@@ -11,6 +11,7 @@
 		8F309E3028230095000EAAFA /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F309E2F28230095000EAAFA /* Singleton.swift */; };
 		8F309E33282300FC000EAAFA /* GradientUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F309E32282300FC000EAAFA /* GradientUIView.swift */; };
 		8FD839212826A8980085357C /* CellsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD839202826A8970085357C /* CellsUIView.swift */; };
+		8FE54F91282713510080B2CA /* WinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE54F90282713510080B2CA /* WinnerViewController.swift */; };
 		A41E65ED28262808008BCE3C /* yes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A41E65EF28262808008BCE3C /* yes.mp3 */; };
 		A41E65F22826281E008BCE3C /* no.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A41E65F42826281E008BCE3C /* no.mp3 */; };
 		A41E65F628262985008BCE3C /* LocalDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41E65F528262985008BCE3C /* LocalDictionary.swift */; };
@@ -33,6 +34,7 @@
 		8F309E2F28230095000EAAFA /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Singleton.swift; path = Allias/Controllers/Singleton.swift; sourceTree = SOURCE_ROOT; };
 		8F309E32282300FC000EAAFA /* GradientUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientUIView.swift; sourceTree = "<group>"; };
 		8FD839202826A8970085357C /* CellsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsUIView.swift; sourceTree = "<group>"; };
+		8FE54F90282713510080B2CA /* WinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnerViewController.swift; sourceTree = "<group>"; };
 		A41E65EE28262808008BCE3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Base; path = Base.lproj/yes.mp3; sourceTree = "<group>"; };
 		A41E65F32826281E008BCE3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Base; path = Base.lproj/no.mp3; sourceTree = "<group>"; };
 		A41E65F528262985008BCE3C /* LocalDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalDictionary.swift; path = Allias/LocalDictionary.swift; sourceTree = SOURCE_ROOT; };
@@ -119,12 +121,13 @@
 			children = (
 				8F309E31282300DD000EAAFA /* SubControllers */,
 				CEA7E63D2820F43C004C4CAA /* MainViewController.swift */,
-				CEA7E6542821673F004C4CAA /* DictionaryViewController.swift */,
 				CEA7E6582821683A004C4CAA /* RullsViewController.swift */,
 				CEA7E652282166D9004C4CAA /* OptionViewController.swift */,
+				CEA7E6542821673F004C4CAA /* DictionaryViewController.swift */,
 				CEA7E656282167CA004C4CAA /* GameViewController.swift */,
 				CEA7E650282165F9004C4CAA /* GameInfoViewController.swift */,
 				35E3624B2823CB8800CCBEDF /* GameInfoTableViewCell.swift */,
+				8FE54F90282713510080B2CA /* WinnerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				CEA7E6592821683A004C4CAA /* RullsViewController.swift in Sources */,
 				CEA7E63A2820F43C004C4CAA /* AppDelegate.swift in Sources */,
 				8FD839212826A8980085357C /* CellsUIView.swift in Sources */,
+				8FE54F91282713510080B2CA /* WinnerViewController.swift in Sources */,
 				CEA7E63C2820F43C004C4CAA /* SceneDelegate.swift in Sources */,
 				35E3624C2823CB8800CCBEDF /* GameInfoTableViewCell.swift in Sources */,
 			);
