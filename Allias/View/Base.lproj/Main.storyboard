@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -141,7 +141,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEAMS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7K-cC-u1d">
-                                <rect key="frame" x="82" y="62" width="250" height="70"/>
+                                <rect key="frame" x="82" y="106" width="250" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="kbe-KR-Hof"/>
                                     <constraint firstAttribute="width" constant="250" id="r4S-1W-T1f"/>
@@ -151,7 +151,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJy-JT-IAd">
-                                <rect key="frame" x="17" y="80" width="30" height="34"/>
+                                <rect key="frame" x="17" y="124" width="30" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="uhD-Ub-3JC"/>
                                     <constraint firstAttribute="height" constant="34" id="yUp-HN-TNf"/>
@@ -165,7 +165,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fKR-Fa-BJA">
-                                <rect key="frame" x="37" y="167" width="340" height="350"/>
+                                <rect key="frame" x="37" y="211" width="340" height="350"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="340" id="24l-NK-1ru"/>
@@ -277,7 +277,13 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" id="uIl-cM-j7s"/>
+                    <navigationItem key="navigationItem" id="uIl-cM-j7s">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dnd-Z9-wNN">
+                            <connections>
+                                <segue destination="Jdv-yk-KK5" kind="presentation" modalTransitionStyle="crossDissolve" id="hc5-Tk-3Yq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="nextTeamToPlay" destination="2IT-2J-vj7" id="LPo-Gc-mAz"/>
                         <outlet property="playButton" destination="eXB-DD-LSk" id="HYO-ZU-ZwG"/>
@@ -286,7 +292,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dXo-Ru-A9T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3531.884057971015" y="143.30357142857142"/>
+            <point key="canvasLocation" x="4403" y="144"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="S16-uN-3E0">
+            <objects>
+                <tableViewController id="Jdv-yk-KK5" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="LZ9-nJ-3Ne">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="QFJ-TO-o8q">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QFJ-TO-o8q" id="Ce1-Mp-plv">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Jdv-yk-KK5" id="T7H-SX-yRn"/>
+                            <outlet property="delegate" destination="Jdv-yk-KK5" id="Wn4-DR-qGj"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N0T-Ih-fXA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4403" y="824"/>
         </scene>
         <!--Option View Controller-->
         <scene sceneID="OuS-xQ-lun">
@@ -882,7 +916,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ma8-Rk-h9O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4665.217391304348" y="-617.41071428571422"/>
+            <point key="canvasLocation" x="4404" y="-617"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="kXo-Ej-Z9U">
@@ -1042,7 +1076,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQ7-hW-Ohi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4665.217391304348" y="143.97321428571428"/>
+            <point key="canvasLocation" x="5372" y="144"/>
         </scene>
         <!--Rulls View Controller-->
         <scene sceneID="r7m-8i-6i4">
@@ -1156,6 +1190,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdE-Oq-zN4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1702.8985507246377" y="-171.42857142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Req-5E-GBX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tb1-ve-tof" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wZw-9i-psH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Tst-v0-6hu" kind="relationship" relationship="rootViewController" id="PIX-af-H9L"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7x2-Lf-gaH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3533" y="144"/>
         </scene>
     </scenes>
     <resources>
