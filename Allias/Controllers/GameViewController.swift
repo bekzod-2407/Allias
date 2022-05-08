@@ -16,11 +16,11 @@ class GameViewController: UIViewController {
     @IBOutlet weak var NoButton: UIButton!
     @IBOutlet weak var YesBotton: UIButton!
 
-    var jokeManager = JokeManager()
+    
     
     
     @IBAction func yesActionButton(_ sender: UIButton) {
-
+        
     }
     
     var timer = Timer()
@@ -121,14 +121,34 @@ class GameViewController: UIViewController {
             
             //Выдаем очки комманде
             commonData.teamDictionary[commonData.teamArray[commonData.activCommandIdx]]! += countPoints
-
-          
-            // Возращение на GameInfoView или WinnerView
-            if commonData.teamDictionary[commonData.teamArray[commonData.activCommandIdx]]! >= commonData.wordCount {
-                presentVC(identifierOfVC: "WinnerStoryboard")
-            } else {
-                presentVC(identifierOfVC: "GameInfoStoryboard")
+            
+            NewApi.shared.dataTask(urlStr: NewApi.shared.urlString) { data in
+                
+                DispatchQueue.main.async {
+                    if let data = data {
+                        let alert = UIAlertController(title: "\(data.setup)", message: "\(data.punchline)", preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "It was fun)", style: UIAlertAction.Style.default, handler: { _ in
+                            if self.commonData.teamDictionary[self.commonData.teamArray[self.commonData.activCommandIdx]]! >= self.commonData.wordCount {
+                                self.presentVC(identifierOfVC: "WinnerStoryboard")
+                            } else {
+                                self.presentVC(identifierOfVC: "GameInfoStoryboard")
+                            }
+                        }))
+                        self.present(alert, animated: true, completion: nil)
+                    } else {
+                        
+            //             Возращение на GameInfoView или WinnerView
+                        if self.commonData.teamDictionary[self.commonData.teamArray[self.commonData.activCommandIdx]]! >= self.commonData.wordCount {
+                            self.presentVC(identifierOfVC: "WinnerStoryboard")
+                        } else {
+                            self.presentVC(identifierOfVC: "GameInfoStoryboard")
+                        }
+                    }
+                }
+                
             }
+            
+          
             
             //Cмена активной команды
             if commonData.activCommandIdx == commonData.teamArray.count - 1{

@@ -12,7 +12,7 @@ class MainViewController: UIViewController {
     let commonData = SingletonStruct.shared
     
     @IBAction func newGameActionButton(_ sender: UIButton) {
-    presentVC(identifierOfVC: "GameInfoStoryboard")
+        presentVC(identifierOfVC: "GameInfoStoryboard")
     }
     
     @IBAction func gameOptionAtcionButton(_ sender: UIButton) {
@@ -28,7 +28,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
     //Перемещение по экранам
     func presentVC(identifierOfVC: String){
         let main = UIStoryboard(name: "Main", bundle: nil)
@@ -36,7 +36,7 @@ class MainViewController: UIViewController {
         destination.modalPresentationStyle = .fullScreen
         destination.modalTransitionStyle = .crossDissolve
         self.present(destination, animated: true, completion: nil)
-
+        
     }
     
 }
