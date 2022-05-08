@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -277,12 +277,8 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" id="uIl-cM-j7s">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dnd-Z9-wNN">
-                            <connections>
-                                <segue destination="Jdv-yk-KK5" kind="presentation" modalTransitionStyle="crossDissolve" id="hc5-Tk-3Yq"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" id="KTs-X9-gIP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="NBT-he-kdF"/>
                     </navigationItem>
                     <connections>
                         <outlet property="nextTeamToPlay" destination="2IT-2J-vj7" id="LPo-Gc-mAz"/>
@@ -292,14 +288,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dXo-Ru-A9T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4403" y="144"/>
+            <point key="canvasLocation" x="5313.04347826087" y="143.97321428571428"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="S16-uN-3E0">
             <objects>
                 <tableViewController id="Jdv-yk-KK5" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="LZ9-nJ-3Ne">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -1076,7 +1072,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQ7-hW-Ohi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5372" y="144"/>
+            <point key="canvasLocation" x="6281.1594202898559" y="143.97321428571428"/>
         </scene>
         <!--Rulls View Controller-->
         <scene sceneID="r7m-8i-6i4">
@@ -1192,22 +1188,25 @@
             <point key="canvasLocation" x="1702.8985507246377" y="-171.42857142857142"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Req-5E-GBX">
+        <scene sceneID="IcG-HB-q4b">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tb1-ve-tof" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m2M-zG-hfg" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wZw-9i-psH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CRi-Af-6wP">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Cv-ug-99s">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="Tst-v0-6hu" kind="relationship" relationship="rootViewController" id="PIX-af-H9L"/>
+                        <segue destination="Tst-v0-6hu" kind="relationship" relationship="rootViewController" id="Pza-lR-eyh"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7x2-Lf-gaH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UAr-TE-wrw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3533" y="144"/>
+            <point key="canvasLocation" x="4402.898550724638" y="143.97321428571428"/>
         </scene>
     </scenes>
     <resources>

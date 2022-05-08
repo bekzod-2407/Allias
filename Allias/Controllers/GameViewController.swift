@@ -15,6 +15,9 @@ class GameViewController: UIViewController {
     @IBOutlet weak var TaskLabel: UILabel!
     @IBOutlet weak var NoButton: UIButton!
     @IBOutlet weak var YesBotton: UIButton!
+
+    var jokeManager = JokeManager()
+    
     
     var timer = Timer()
     var player: AVAudioPlayer?
@@ -26,7 +29,8 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        jokeManager.delegate = self
+//        test_Api.text = jokeManager()
         buttonsParametrs(WordsButton)
         buttonsParametrs(PrevWordsButton)
         
@@ -124,3 +128,4 @@ class GameViewController: UIViewController {
         self.present(destination, animated: true, completion: nil)
     }
 }
+

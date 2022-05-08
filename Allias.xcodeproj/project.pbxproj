@@ -15,6 +15,8 @@
 		A41E65ED28262808008BCE3C /* yes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A41E65EF28262808008BCE3C /* yes.mp3 */; };
 		A41E65F22826281E008BCE3C /* no.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A41E65F42826281E008BCE3C /* no.mp3 */; };
 		A41E65F628262985008BCE3C /* LocalDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41E65F528262985008BCE3C /* LocalDictionary.swift */; };
+		CE63A86228270A82004F0FB7 /* JokeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE63A86128270A82004F0FB7 /* JokeData.swift */; };
+		CE63A86428270D78004F0FB7 /* JokeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE63A86328270D78004F0FB7 /* JokeManager.swift */; };
 		CEA7E63A2820F43C004C4CAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7E6392820F43C004C4CAA /* AppDelegate.swift */; };
 		CEA7E63C2820F43C004C4CAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7E63B2820F43C004C4CAA /* SceneDelegate.swift */; };
 		CEA7E63E2820F43C004C4CAA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7E63D2820F43C004C4CAA /* MainViewController.swift */; };
@@ -38,6 +40,8 @@
 		A41E65EE28262808008BCE3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Base; path = Base.lproj/yes.mp3; sourceTree = "<group>"; };
 		A41E65F32826281E008BCE3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Base; path = Base.lproj/no.mp3; sourceTree = "<group>"; };
 		A41E65F528262985008BCE3C /* LocalDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalDictionary.swift; path = Allias/LocalDictionary.swift; sourceTree = SOURCE_ROOT; };
+		CE63A86128270A82004F0FB7 /* JokeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeData.swift; sourceTree = "<group>"; };
+		CE63A86328270D78004F0FB7 /* JokeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeManager.swift; sourceTree = "<group>"; };
 		CEA7E6362820F43C004C4CAA /* Allias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Allias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA7E6392820F43C004C4CAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEA7E63B2820F43C004C4CAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +85,15 @@
 				A41E65EF28262808008BCE3C /* yes.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		CE63A86028270A22004F0FB7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CE63A86128270A82004F0FB7 /* JokeData.swift */,
+				CE63A86328270D78004F0FB7 /* JokeManager.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		CEA7E62D2820F43C004C4CAA = {
@@ -143,6 +156,7 @@
 		CEA7E64F28216017004C4CAA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE63A86028270A22004F0FB7 /* API */,
 				8F309E2F28230095000EAAFA /* Singleton.swift */,
 				A41E65F528262985008BCE3C /* LocalDictionary.swift */,
 			);
@@ -223,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE63A86428270D78004F0FB7 /* JokeManager.swift in Sources */,
 				CEA7E657282167CA004C4CAA /* GameViewController.swift in Sources */,
 				A41E65F628262985008BCE3C /* LocalDictionary.swift in Sources */,
 				8F309E3028230095000EAAFA /* Singleton.swift in Sources */,
@@ -230,6 +245,7 @@
 				35E362522826DE2000CCBEDF /* NewTeamViewController.swift in Sources */,
 				CEA7E651282165F9004C4CAA /* GameInfoViewController.swift in Sources */,
 				8F309E33282300FC000EAAFA /* GradientUIView.swift in Sources */,
+				CE63A86228270A82004F0FB7 /* JokeData.swift in Sources */,
 				CEA7E653282166D9004C4CAA /* OptionViewController.swift in Sources */,
 				CEA7E63E2820F43C004C4CAA /* MainViewController.swift in Sources */,
 				CEA7E6592821683A004C4CAA /* RullsViewController.swift in Sources */,
