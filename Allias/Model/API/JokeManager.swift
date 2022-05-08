@@ -7,10 +7,10 @@
 
 import Foundation
 
-protocol JokeManagerDelegate {
-    func didUpdateJoke(setup: String)
-    func didFailWithError(error: Error)
-}
+//protocol JokeManagerDelegate {
+//    func didUpdateJoke(setup: String)
+//    func didFailWithError(error: Error)
+//}
 
 //struct JokeManager {
 //    let urlString = "https://joke.deno.dev/"
@@ -94,7 +94,7 @@ final class NewApi {
             }
 
             do {
-                // Data parse
+                // Data parse 
                 
                 let data = try JSONDecoder().decode(JokeData.self, from: data)
                 

@@ -33,8 +33,7 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        jokeManager.delegate = self
-//        test_Api.text = jokeManager()
+//
         buttonsParametrs(WordsButton)
         buttonsParametrs(PrevWordsButton)
         
@@ -121,7 +120,7 @@ class GameViewController: UIViewController {
             
             //Выдаем очки комманде
             commonData.teamDictionary[commonData.teamArray[commonData.activCommandIdx]]! += countPoints
-            
+            // alert joke
             NewApi.shared.dataTask(urlStr: NewApi.shared.urlString) { data in
                 
                 DispatchQueue.main.async {
