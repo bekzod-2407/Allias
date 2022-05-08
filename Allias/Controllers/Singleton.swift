@@ -31,11 +31,19 @@ final class SingletonStruct {
     var taskDictionary: Array = LocalDictionary().taskDictionary.shuffled()
     var tempTasksIdx: Int = 0
     
+<<<<<<< HEAD
     //Комманды
     var teamArray: Array = ["❤️ Lovers", "💀 DeathEaters", "🤖 Robots"]
     var teamDictionary: Dictionary = ["❤️ Lovers": 0, "💀 DeathEaters": 0, "🤖 Robots": 0]
     
     //Текущая активная комманда
+=======
+    //команды
+    var teamArray: Array = ["💀 DeathEaters", "🤖 Robots"]
+    var teamDictionary: Dictionary = ["💀 DeathEaters": 0, "🤖 Robots": 0]
+    
+    //текущая активная комманда
+>>>>>>> d2eef26b4b93a402d94f2d7e7e874579fe14d7c3
     var activCommandIdx: Int = 0
     
     

@@ -7,17 +7,36 @@ class GameInfoViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var nextTeamToPlay: UILabel!
     @IBOutlet weak var playButton: UIButton!
     
+<<<<<<< HEAD
     let commonData = SingletonStruct.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+=======
+    var singleShared = SingletonStruct.shared
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        playButton.isEnabled = false
+        countIsOk()
+>>>>>>> d2eef26b4b93a402d94f2d7e7e874579fe14d7c3
         tableTeams.delegate = self
         tableTeams.dataSource = self
         
         
         tableTeamCustomization()
 
+    }
+    
+    func countIsOk() {
+        print(singleShared.teamArray.count)
+        if singleShared.teamArray.count < 2 || singleShared.teamArray.count > 5 {
+            
+            playButton.isEnabled = false
+        } else {
+            playButton.isEnabled = true
+        }
     }
     
     @IBAction func previousPageButtonPressed(_ sender: UIButton) {
@@ -27,8 +46,6 @@ class GameInfoViewController: UIViewController, UITableViewDelegate, UITableView
     @IBAction func playButtonPressed(_ sender: UIButton) {
         presentVC(identifierOfVC: "GameStoryboard")
     }
-    
-    @IBAction func cancelAction(_segue: UIStoryboardSegue) {}
     
     func tableView(_ tableTeams: UITableView, numberOfRowsInSection section: Int) -> Int {
         return commonData.teamArray.count
@@ -59,17 +76,26 @@ class GameInfoViewController: UIViewController, UITableViewDelegate, UITableView
         
         if editingStyle == .delete {
             tableView.beginUpdates()
+<<<<<<< HEAD
             commonData.teamArray.remove(at: indexPath.row)
+=======
+            singleShared.teamDictionary.removeValue(forKey: singleShared.teamArray[indexPath.row])
+            singleShared.teamArray.remove(at: indexPath.row)
+>>>>>>> d2eef26b4b93a402d94f2d7e7e874579fe14d7c3
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
+            countIsOk()
         }
     }
     
+<<<<<<< HEAD
     func tableTeamCustomization(){
         playButton.layer.cornerRadius = 25
         tableTeams.separatorStyle = .none
         tableTeams.showsVerticalScrollIndicator = false
     }
+=======
+>>>>>>> d2eef26b4b93a402d94f2d7e7e874579fe14d7c3
     
     //Перемещение по экранам
     func presentVC(identifierOfVC: String){
@@ -79,6 +105,13 @@ class GameInfoViewController: UIViewController, UITableViewDelegate, UITableView
         destination.modalTransitionStyle = .crossDissolve
         self.present(destination, animated: true, completion: nil)
 
+    }
+    
+    @IBAction func unwindSegue(_segue: UIStoryboardSegue) {
+        guard let newTeamVC = _segue.source as? NewTeamViewController else {return}
+        newTeamVC.saveNewTeam()
+        tableTeams.reloadData()
+        countIsOk()
     }
     
 }
