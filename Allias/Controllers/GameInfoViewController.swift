@@ -7,15 +7,17 @@ class GameInfoViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var nextTeamToPlay: UILabel!
     @IBOutlet weak var playButton: UIButton!
     
-    var commonData = SingletonStruct()
+    let commonData = SingletonStruct.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableTeams.delegate = self
         tableTeams.dataSource = self
-        playButton.layer.cornerRadius = 25
-        tableTeams.separatorStyle = .none
-        tableTeams.showsVerticalScrollIndicator = false
+        
+        
+        tableTeamCustomization()
+
     }
     
     @IBAction func previousPageButtonPressed(_ sender: UIButton) {
@@ -42,8 +44,10 @@ class GameInfoViewController: UIViewController, UITableViewDelegate, UITableView
         cell.teamNameLabel.text = teamCell
         if let pointTeam = commonData.teamDictionary[teamCell] {
             cell.pointsLabel.text = String(pointTeam)
+
         }
         cell.layer.backgroundColor = UIColor.clear.cgColor
+        nextTeamToPlay.text = "Team \(commonData.teamArray[commonData.activCommandIdx])\n would play next!"
         return cell
     }
     
@@ -61,6 +65,12 @@ class GameInfoViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    func tableTeamCustomization(){
+        playButton.layer.cornerRadius = 25
+        tableTeams.separatorStyle = .none
+        tableTeams.showsVerticalScrollIndicator = false
+    }
+    
     //Перемещение по экранам
     func presentVC(identifierOfVC: String){
         let main = UIStoryboard(name: "Main", bundle: nil)
@@ -68,6 +78,7 @@ class GameInfoViewController: UIViewController, UITableViewDelegate, UITableView
         destination.modalPresentationStyle = .fullScreen
         destination.modalTransitionStyle = .crossDissolve
         self.present(destination, animated: true, completion: nil)
+
     }
     
 }

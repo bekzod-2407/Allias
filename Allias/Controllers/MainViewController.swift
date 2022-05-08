@@ -8,7 +8,9 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
+    let commonData = SingletonStruct.shared
+    
     @IBAction func newGameActionButton(_ sender: UIButton) {
     presentVC(identifierOfVC: "GameInfoStoryboard")
     }
@@ -34,6 +36,7 @@ class MainViewController: UIViewController {
         destination.modalPresentationStyle = .fullScreen
         destination.modalTransitionStyle = .crossDissolve
         self.present(destination, animated: true, completion: nil)
+
     }
     
 }

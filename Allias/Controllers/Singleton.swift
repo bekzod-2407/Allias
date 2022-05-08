@@ -11,32 +11,35 @@ final class SingletonStruct {
     
     static var shared = SingletonStruct()
     
-    var roundTime: Int = 20
-    var wordCount: Int = 0
-    //частота показа задания
+    var roundTime: Int = 2
+    var wordCount: Int = 20
+  
+    //Пастота показа задания
     var howOftenTask: Int = 3
-    //показывать задание?
+    
+    //Показывать задание?
     var showTask: Bool = false
     
     //!!!!!!!(нужна функция на заполнение или заполение из DictionaryView)
     //массив слов выбранного словаря
     //var tempLocalDictionary: Array<String> = []
-    var tempLocalDictionary = ["кран", "лопата", "овца", "учитель", "человек", "завтрак", "дневник", "паровоз"]
+    var tempLocalDictionary = LocalDictionary().wordsArrayEasy.shuffled()
     var tempWordIdx: Int = 0
     
     //массив действий к словам
     //var taskDictionary: Array<String> = []
-    var taskDictionary = ["Стоя на одной ноге", "Не используя глаголы", "Не говори, а покажи"]
+    var taskDictionary: Array = LocalDictionary().taskDictionary.shuffled()
     var tempTasksIdx: Int = 0
     
-    //команды
-    var teamArray: Array = ["❤️ Lovers", "💀 DeathEaters", "🤖 Robots", "🧔🏻‍♂️ Mens", "👯‍♀️ Women"]
-    var teamDictionary: Dictionary = ["❤️ Lovers": 0, "💀 DeathEaters": 0, "🤖 Robots": 0, "🧔🏻‍♂️ Mens": 0, "👯‍♀️ Women": 0]
-    //текущая активная комманда
+    //Комманды
+    var teamArray: Array = ["❤️ Lovers", "💀 DeathEaters", "🤖 Robots"]
+    var teamDictionary: Dictionary = ["❤️ Lovers": 0, "💀 DeathEaters": 0, "🤖 Robots": 0]
+    
+    //Текущая активная комманда
     var activCommandIdx: Int = 0
     
     
-    //функция для определения частоты показа задания
+    //Функция для определения частоты показа задания
     func changeOftenTask(_ tempVal : Int) {
         var retVal = 0
         
@@ -56,22 +59,6 @@ final class SingletonStruct {
     }
     
     
-    //функция для смены активной команды
-    func setActivCommand (_ commandName: String){
-        activCommandIdx += 1
-        
-        if activCommandIdx > teamArray.count{
-            activCommandIdx = 0
-        }
-    }
-    
-    
-    //функция для обновления баллов команды
-    func addPoints(_ tempPoints: Int){
-        teamDictionary[teamArray[activCommandIdx]] = (teamDictionary[teamArray[activCommandIdx]]) ?? 0 + tempPoints
-    }
-    
-    
     //фунцкция для определения надо ли выводить задание
     func checkTask(){
         if tempWordIdx % howOftenTask == 0 && tempWordIdx != 0 {
@@ -87,7 +74,6 @@ final class SingletonStruct {
         
         print("showTask \(showTask)")
     }
-    
     
     //функция для получения след. слова
     func nextWord() -> String {

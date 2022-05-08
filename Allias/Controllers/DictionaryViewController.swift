@@ -21,16 +21,21 @@ class DictionaryViewController: UIViewController {
     @IBOutlet weak var mvCount: UILabel!
     @IBOutlet weak var hwCount: UILabel!
     
+    
     @IBAction func easyWordsActionButton(_ sender: UIButton) {
+        commonData.tempLocalDictionary = LocalDictionary().wordsArrayHard.shuffled()
         presentVC(identifierOfVC: "OptionStoryboard")
     }
     
     @IBAction func mediumWordsActionButton(_ sender: UIButton) {
+        commonData.tempLocalDictionary = LocalDictionary().wordsArrayMedium.shuffled()
         presentVC(identifierOfVC: "OptionStoryboard")
     }
     
     @IBAction func hardWordsActionButton(_ sender: UIButton) {
+        commonData.tempLocalDictionary = LocalDictionary().wordsArrayHard.shuffled()
         presentVC(identifierOfVC: "OptionStoryboard")
+
     }
 
     
@@ -61,5 +66,6 @@ class DictionaryViewController: UIViewController {
         destination.modalPresentationStyle = .fullScreen
         destination.modalTransitionStyle = .crossDissolve
         self.present(destination, animated: true, completion: nil)
+
     }
 }
