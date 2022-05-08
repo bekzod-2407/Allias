@@ -30,8 +30,9 @@ final class SingletonStruct {
     var tempTasksIdx: Int = 0
     
     //команды
-    var teamArray: Array = ["❤️ Lovers", "💀 DeathEaters", "🤖 Robots", "🧔🏻‍♂️ Mens", "👯‍♀️ Women"]
-    var teamDictionary: Dictionary = ["❤️ Lovers": 0, "💀 DeathEaters": 0, "🤖 Robots": 0, "🧔🏻‍♂️ Mens": 0, "👯‍♀️ Women": 0]
+    var teamArray: Array = ["💀 DeathEaters", "🤖 Robots"]
+    var teamDictionary: Dictionary = ["💀 DeathEaters": 0, "🤖 Robots": 0]
+    
     //текущая активная комманда
     var activCommandIdx: Int = 0
     

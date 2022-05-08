@@ -7,15 +7,27 @@ class GameInfoViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var nextTeamToPlay: UILabel!
     @IBOutlet weak var playButton: UIButton!
     
-    var singleShared = SingletonStruct()
+    var singleShared = SingletonStruct.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        playButton.isEnabled = false
+        countIsOk()
         tableTeams.delegate = self
         tableTeams.dataSource = self
         playButton.layer.cornerRadius = 25
         tableTeams.separatorStyle = .none
         tableTeams.showsVerticalScrollIndicator = false
+    }
+    
+    func countIsOk() {
+        print(singleShared.teamArray.count)
+        if singleShared.teamArray.count < 2 || singleShared.teamArray.count > 5 {
+            
+            playButton.isEnabled = false
+        } else {
+            playButton.isEnabled = true
+        }
     }
     
     @IBAction func previousPageButtonPressed(_ sender: UIButton) {
@@ -25,8 +37,6 @@ class GameInfoViewController: UIViewController, UITableViewDelegate, UITableView
     @IBAction func playButtonPressed(_ sender: UIButton) {
         presentVC(identifierOfVC: "GameStoryboard")
     }
-    
-    @IBAction func cancelAction(_segue: UIStoryboardSegue) {}
     
     func tableView(_ tableTeams: UITableView, numberOfRowsInSection section: Int) -> Int {
         return singleShared.teamArray.count
@@ -55,11 +65,14 @@ class GameInfoViewController: UIViewController, UITableViewDelegate, UITableView
         
         if editingStyle == .delete {
             tableView.beginUpdates()
+            singleShared.teamDictionary.removeValue(forKey: singleShared.teamArray[indexPath.row])
             singleShared.teamArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
+            countIsOk()
         }
     }
+    
     
     //Перемещение по экранам
     func presentVC(identifierOfVC: String){
@@ -68,6 +81,13 @@ class GameInfoViewController: UIViewController, UITableViewDelegate, UITableView
         destination.modalPresentationStyle = .fullScreen
         destination.modalTransitionStyle = .crossDissolve
         self.present(destination, animated: true, completion: nil)
+    }
+    
+    @IBAction func unwindSegue(_segue: UIStoryboardSegue) {
+        guard let newTeamVC = _segue.source as? NewTeamViewController else {return}
+        newTeamVC.saveNewTeam()
+        tableTeams.reloadData()
+        countIsOk()
     }
     
 }
